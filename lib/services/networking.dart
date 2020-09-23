@@ -9,13 +9,12 @@ class NetworkHelper {
   // Get json data from API and return decodedData.
   Future<dynamic> getData() async {
     http.Response response = await http.get(url);
-
     if (response.statusCode == 200) {
       String data = response.body;
       var decodedData = jsonDecode(data);
       return decodedData;
     } else {
-      throw Exception("Failed to load data from API");
+      throw Exception("Failed to load data from api");
     }
   }
 }

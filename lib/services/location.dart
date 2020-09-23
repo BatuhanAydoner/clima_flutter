@@ -4,6 +4,7 @@ class Location {
   double latitude;
   double longitude;
 
+  // Get user's current location.
   Future<void> getCurrentLocation() async {
     Position position;
     try {
